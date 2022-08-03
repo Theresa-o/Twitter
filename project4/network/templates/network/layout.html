@@ -52,7 +52,7 @@
                             <a class="navbar-brand" href="#">
                                 <img src= {% static 'network/images/brand.svg' %} alt="Twitter logo" class="twitter-logo">
                             </a>
-                            <ul class="nav flex-column left-sidebar-menu">
+                            <ul class="nav flex-column left-sidebar-menu mb-4 mt-2">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <img src= {% static 'network/images/all-post.svg' %} alt="All post" class="left-sidebar-menu-icon">
@@ -95,54 +95,72 @@
                     </nav>
                 </div>
                 <div class="col-5">
-                <div class="main-page-header mt-3 sticky-top">Home</div>
-                <div class="main-page-input">
-                    <form class="d-flex flex-column">
-                        <div class="row">
-                            <div class="col-2 main-page-header-profile-picture">
-                                <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" class="main-page-header-profile-picture" alt="main-page-header-profile-picture"/>
-                            </div>
-                            <div class="col-10">
-                                <div class="main-page-input-box">
-                                    <div>
-                                        <input type="text" class="form-control main-page-tweet-box" id="exampleFormControlInput1" placeholder="What's happening">
-                                        <span class="placeholder"></span>
+                    <div class="main-page-header mt-3 sticky-top">Home</div>
+                    <div class="main-page-input">
+                        <!-- <form class="d-flex flex-column"> -->
+                            <div class="row">
+                                <div class="col-2 main-page-header-profile-picture">
+                                    <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" class="main-page-header-profile-picture" alt="profile-picture"/>
+                                </div>
+                                <div class="col-10">
+                                    <div class="main-page-input-box">
+                                        <div>
+                                            <textarea name="tweet-box" id="" class="form-control main-page-tweet-box text-wrap" cols="30" rows="10" placeholder="What's happening"></textarea>
+                                            <!-- <input type="text" class="form-control main-page-tweet-box text-wrap" id="exampleFormControlInput1" placeholder="What's happening"> -->
+                                        </div>
+                                        <div class="main-page-input-privacy pb-2 mt-3">
+                                            <i class="fas fa-globe-americas main-page-input-privacy-icon"></i>
+                                            <span class="ain-page-input-privacy-text ml-2">Everyone can reply</span>
+                                        </div>
                                     </div>
-                                    <div class="main-page-input-privacy">
-                                        <i class="fas fa-globe-americas"></i>
-                                        <span>Everyone can reply</span>
+                                    <div class="main-page-input-icons mt-3">
+                                        <ul class="main-page-input-icons-ul">
+                                            <li><i class="fa-solid fa-image"></i></li>
+                                            <li><i class="fa-solid fa-square-poll-horizontal"></i></li>
+                                            <li><i class="fa-solid fa-face-grin"></i></li>
+                                            <li><i class="fa-regular fa-calendar"></i></li>
+                                            <li><i class="fa-solid fa-location-dot"></i></li>
+                                        </ul>
+                                        <button type="submit" class="btn btn-primary rounded-pill px-4 main-page-tweet-button"><strong>Tweet</strong></button>
                                     </div>
                                 </div>
-                                <div class="main-page-input-icons">
-                                    <ul class="main-page-input-icons-ul mr-5 pr-4">
-                                        <li><i class="fa-solid fa-image"></i></li>
-                                        <li><i class="fa-solid fa-square-poll-horizontal"></i></li>
-                                        <li><i class="fa-solid fa-face-grin"></i></li>
-                                        <li><i class="fa-regular fa-calendar"></i></li>
-                                        <li><i class="fa-solid fa-location-dot"></i></li>
-                                    </ul>
-                                    <button type="submit" class="btn btn-primary">Tweet</button>
+                            </div>
+                    <!-- </form> -->
+                    </div>
+
+                    <div class="tweet-feed">
+                        <div class="tweet">
+                            <img src="http://placeimg.com/140/140/people" alt="author profile picture" class="tweet-author-image"/>
+                            <div class="tweet-feed-content">
+                                <div class="tweet-header">
+                                    <a href="#" class="tweet-author-username">Nick Huber</a>
+                                    <div class="tweet-author-handle">@sweatystartup</div>
+                                    <div class="tweeted-time">8h</div>
+                                </div>
+                                <div class="tweet-content">
+                                    <div class="tweet-created-content">It is a wonderful day</div>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
-
-                <!-- <div class="tweetBox">
-                    <form>
-                    <div class="tweetbox__input">
-                        <!-- <img
-                        <!-- src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" -->
-                        <!-- alt="" -->
-                        <!-- <input type="text" placeholder="What's happening?" />
+                        <div class="tweet">
+                            <img src="http://placeimg.com/140/140/animals" alt="author profile picture" class="tweet-author-image"/>
+                            <div class="tweet-feed-content">
+                                <div class="tweet-header">
+                                    <a href="#" class="tweet-author-username">Randall</a>
+                                    <div class="tweet-author-handle">@RandallKanna</div>
+                                    <div class="tweeted-time">18h</div>
+                                </div>
+                                <div class="tweet-content">
+                                    <div class="tweet-created-content">Hey friends, today in this blog you’ll learn how to create a Tweet Box with Character Limit Highlighting in JavaScript.</div>
+                                    <img src="http://placeimg.com/300/300/tech" alt="tweeter feed"/>
+                                </div>    
+                            </div>
+                        </div>
                     </div>
-                    <button class="tweetBox__tweetButton">Tweet</button>
-                    </form>
-                </div> -->
-
                 </div>
+
                 <div class="col-4">
-                Column
+                TODO
                 </div>
             </div>
         </div>
