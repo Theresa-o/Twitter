@@ -17,8 +17,9 @@ html {
 }
 
 .left-sidebar {
-  /* position: fixed; */
-  position: relative;
+  position: fixed;
+  top: 0;
+  margin-top: 13px;
 }
 
 .navbar-brand:hover {
@@ -26,7 +27,6 @@ html {
   border-radius: 50%;
   color: #1da0f2;
   margin-right: 23px;
-  /* padding: 20px; */
 }
 
 .left-sidebar-menu {
@@ -47,13 +47,24 @@ html {
 
 .nav-item {
   padding: 10px;
-  margin: 2px 2px;
+  margin: 0 2px;
 }
 
-.nav-item:hover {
-  background: rgba(29, 161, 242, 0.1);
+/* .nav-item:hover {
+    background: rgb(225, 232, 237);
+    border-radius: 18px;
+    color: rgb(15, 20, 25);
+} */
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(15, 20, 25);
   border-radius: 20px;
-  color: #1da0f2;
+}
+
+.nav-link:hover {
+  background: rgb(225, 232, 237);
+  color: rgb(15, 20, 25);
 }
 
 /* --------------------------------MAIN PAGE------ */
@@ -109,8 +120,6 @@ html {
 }
 
 .main-page-input-privacy {
-  /* display: flex;
-    align-items: flex-start; */
   display: inline-block;
   color: #1da1f2;
   cursor: pointer;
@@ -121,10 +130,6 @@ html {
 main-page-input-privacy-text {
   display: inline;
 }
-
-/* .main-page-input-privacy i{
-    float: left;
-} */
 
 .main-page-input-icons {
   display: flex;
@@ -156,23 +161,14 @@ main-page-input-privacy-text {
   background-color: #1da1f2;
   text-align: center;
   cursor: pointer;
-  /* width: 75px; */
-  /* height: 30px; */
   border: none;
   outline: none;
   opacity: 0.5;
 }
 
-/* .main-page-input form {
-
-} */
 
 /* .left-sidebar-menu-icon-active using js {
     filter: invert(52%) sepia(50%) saturate(2964%) hue-rotate(179deg) brightness(95%) contrast(97%);
-
-} */
-
-/* .left-sidebar-menu-btn {
 
 } */
 
@@ -206,7 +202,6 @@ main-page-input-privacy-text {
 }
 
 .tweetBox__tweetButton {
-  background-color: var(--twitter-color);
   border: none;
   color: white;
   font-weight: 900;
@@ -224,6 +219,10 @@ main-page-input-privacy-text {
   border-bottom: 1px solid #e6ecf0;
   cursor: pointer;
   padding: 10px 15px;
+}
+
+.tweet:hover {
+  background-color: #F5F8FA;
 }
 
 .tweet-author-image {
@@ -247,7 +246,13 @@ main-page-input-privacy-text {
   text-decoration: none;
   font-size: 15px;
   margin-right: 3px;
+}
 
+.tweet-author-username:hover,
+tweet-author-username:active,
+tweet-author-username:focus {
+  text-decoration: underline;
+  color: #14171a;
 }
 
 .tweet-author-handle {
@@ -273,3 +278,46 @@ main-page-input-privacy-text {
   margin-left: -30px;
   width: 400px;
 }
+
+/* ------------------------RIGHT SIDEBAR-------------------------- */
+
+.searchWrapper{
+  width: 100%;
+  margin: 5px auto;
+}
+
+.searchBar{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#searchQuerySubmit{
+  width: 56px;
+  height: 44.8px;
+  margin-right: -56px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#searchQuerySubmit:hover {
+  cursor: pointer;
+}
+
+#searchQueryInput{
+  width: 100%;
+  height: 44px;
+  background: #F5F8FA;
+  outline: none;
+  border: none;
+  border-radius: 26px;
+  padding: 0 56px 0 24px;
+}
+
+#searchQueryInput::placeholder{
+  margin-right: 60px;
+}
+
+
