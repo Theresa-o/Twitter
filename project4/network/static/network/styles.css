@@ -10,29 +10,26 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 }
 
-.twitter-logo {
-  height: 28px;
-  filter: invert(52%) sepia(50%) saturate(2964%) hue-rotate(179deg) brightness(95%) contrast(97%);
-  margin-left: 25px;
-}
-
 .left-sidebar {
   position: fixed;
   top: 0;
   margin-top: 13px;
 }
 
-.navbar-brand:hover {
-  background: rgba(29, 161, 242, 0.1);
+.twitter-logo{
+  display: inline-block;
   border-radius: 50%;
-  color: #1da0f2;
-  margin-right: 23px;
+  height: 28px;
+  filter: invert(52%) sepia(50%) saturate(2964%) hue-rotate(179deg) brightness(95%) contrast(97%);
+  margin-left: 50px;
+}
+
+.twitter-logo:hover {
+  background-color: rgba(29, 161, 242, 0.1);
 }
 
 .left-sidebar-menu {
   font-size: 20px;
-  cursor: pointer;
-  font-weight: 700;
   display: flex;
   color: rgb(15, 20, 25);
   font-family: 'Times New Roman', Times, serif;
@@ -41,20 +38,13 @@ html {
 .left-sidebar-menu-icon {
   align-items: flex-start;
   height: 26px;
-  margin-right: 20px;
-
+  margin-right: 15px;
 }
 
 .nav-item {
-  padding: 10px;
-  margin: 0 2px;
+  padding: 8px 10px 5px 40px;
+  cursor: pointer;
 }
-
-/* .nav-item:hover {
-    background: rgb(225, 232, 237);
-    border-radius: 18px;
-    color: rgb(15, 20, 25);
-} */
 
 .nav-link {
   text-decoration: none;
@@ -67,22 +57,73 @@ html {
   color: rgb(15, 20, 25);
 }
 
+.tweet-btn{
+  display: block;
+  width: 230px;
+  background-color: #1d9bf0;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 5px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+.tweet-btn:hover{
+  background: #088fe9;
+  color: #fff;
+}
+
+.sidebar-tweet-btn{
+  font-size: 20px;
+  color: #fff;
+  display: none;
+}
+
+
 /* --------------------------------NAVBAR PROFILE------------------------------------- */
 
-.sidebar-profile{
-  display: flex;
-}
 
-.sidebar-profile-block{
+.sidebar-profile-block{ 
   position: fixed;
   bottom: 0;
-  margin-bottom: 13px;
   display: flex;
+  align-items: center;
+  border-radius: 50px;
+  margin-left: 40px;
+  cursor: pointer;
+  padding: 10px;
 }
 
-/* .sidebar-profile-extra{
+.sidebar-profile-block:hover{
+  background-color: rgb(225, 232, 237);;
+}
+
+.sidebar-profile-content{
   display: flex;
-} */
+  padding: 0 12px;
+}
+
+.tweet-author-image{
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+}
+
+.sidebar-profile-meta{
+  font-size: 15px;
+  padding: 5px 0;
+}
+
+.sidebar-extra{
+  font-size: 16px;
+  margin-top: 20px;
+  padding-left: 52px;
+}
 
 
 /* --------------------------------MAIN PAGE------ */
@@ -355,9 +396,7 @@ tweet-author-username:focus {
   border: 1.3px solid #1DA1F2;
 }
 
-/* #searchQueryInput::placeholder{
-  margin-right: 60px;
-} */
+
 /* ------------------------------TRENDS HEADER ------------------------------- */
 .sidebar-trends{
   background-color: #F5F8FA;
@@ -457,21 +496,22 @@ tweet-author-username:focus {
 
 
 .twitter-name{
-  color: #14171a;
+  color: rgb(15, 20, 25);
   text-decoration: none;
   font-weight: 700;
+  line-height: 1.5;
   /* font-weight: 400; */
   font-family: 'Times New Roman', Times, serif;
   font-size: 15px;
 }
 
 .twitter-name:hover{
-  color: #14171a;
+  color: rgb(15, 20, 25);
   text-decoration: none;
 }
 
 .twitter-handle{
-  color: #657786;
+  color: rgb(83, 100, 113);
   text-decoration: none;
   font-weight: 400;
   font-family: 'Times New Roman', Times, serif;
@@ -479,7 +519,7 @@ tweet-author-username:focus {
 }
 
 .twitter-handle:hover {
-  color: #657786;
+  color: rgb(83, 100, 113);
   text-decoration: none;
 }
 
@@ -506,4 +546,56 @@ tweet-author-username:focus {
 
 .sidebar-footer-row a:hover{
   text-decoration: underline;
+}
+
+/* ----------------RESPONSIVENESS------------------- */
+@media screen and (max-width: 1200px) {
+  .left-sidebar{
+    width: 75px;
+  }
+
+  .nav-item{
+    padding: 9px 11px;
+  }
+
+  .left-sidebar-menu-icon{
+    margin-left: 0;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .tweet-btn{
+    font-size: 20px;
+    width: auto;
+    padding: 12px;
+
+  }
+
+  .sidebar-tweet-btn{
+    display: block;
+    margin: auto;
+  }
+
+  .sidebar-profile-content{
+    display: none;
+  }
+
+  .sidebar-profile-profilepic{
+    margin-right: 0;
+    width: 55px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .right-sidebar {
+      display: none;
+    }
+
+  .main-page-input-icons-ul{
+    display: flex;
+    flex-direction: row;
+  }
 }

@@ -56,45 +56,60 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <img src= {% static 'network/images/all-post.svg' %} alt="All post" class="left-sidebar-menu-icon">
-                                        All Post
+                                        <span class="nav-text">All Post</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <img src= {% static 'network/images/following.svg' %} alt="Following" class="left-sidebar-menu-icon">
-                                        Following
+                                        <span class="nav-text">Following</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <img src= {% static 'network/images/notifications.svg' %} alt="Notifications" class="left-sidebar-menu-icon">
-                                        Notifications
+                                        <span class="nav-text">Notifications</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <img src= {% static 'network/images/messages.svg' %} alt="Messages" class="left-sidebar-menu-icon">
-                                        Messages
+                                        <span class="nav-text">Messages</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src= {% static 'network/images/list.svg' %} alt="Messages" class="left-sidebar-menu-icon">
+                                        <span class="nav-text">Bookmarks</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src= {% static 'network/images/bookmark.svg' %} alt="Messages" class="left-sidebar-menu-icon">
+                                        <span class="nav-text">Lists</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <img src= {% static 'network/images/profile.svg' %} alt="Profile" class="left-sidebar-menu-icon">
-                                        Profile
+                                        <span class="nav-text">Profile</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <img src= {% static 'network/images/more.svg' %} alt="More" class="left-sidebar-menu-icon">
-                                        More
+                                        <span class="nav-text">More</span>
                                     </a>
                                 </li>
-                                <button class="btn btn-primary rounded-pill my-2 py-3">Tweet</button>
+                                <a href="#" class="tweet-btn">
+                                    <img src= {% static 'network/images/pen.svg' %} alt="Tweet" class="left-sidebar-menu-icon sidebar-tweet-btn">
+                                    <span class="nav-text">Tweet</span>
+                                </a>
                             </ul>
                             <div class="sidebar-profile">
                                 <div class="sidebar-profile-block">
                                     <div class="sidebar-profile-profilepic">
-                                        <img src="http://placeimg.com/70/70/arch" class="tweet-author-image" alt="profile-picture"/>
+                                        <img src="http://placeimg.com/35/35/arch" class="tweet-author-image" alt="profile-picture"/>
                                     </div>
                                     <div class="sidebar-profile-content">
                                         <div class="sidebar-profile-meta">
@@ -106,7 +121,7 @@
                                             </div>
                                         </div>
                                         <div class="sidebar-profile-extra">
-                                            <i class="fa-solid fa-ellipsis"></i>
+                                            <i class="fa-solid fa-ellipsis sidebar-extra"></i>
                                         </div>
                                     </div>   
                                 </div>   
@@ -120,10 +135,10 @@
                     <div class="main-page-input">
                         <!-- <form class="d-flex flex-column"> -->
                             <div class="row">
-                                <div class="col-2 main-page-header-profile-picture">
+                                <div class="col-2 col-xl-1 main-page-header-profile-picture">
                                     <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" class="main-page-header-profile-picture" alt="profile-picture"/>
                                 </div>
-                                <div class="col-10">
+                                <div class="col-10 col-xl-11">
                                     <div class="main-page-input-box">
                                         <div>
                                             <textarea name="tweet-box" id="" class="form-control main-page-tweet-box text-wrap" cols="30" rows="10" placeholder="What's happening"></textarea>
@@ -197,8 +212,8 @@
                     </div>
                 </div>
 
-                <div class="col-4 right-sidebar">
-                    <div class="searchWrapper">
+                <div class="col-4 right-sidebar d-none d-xl-block">
+                    <div class="searchWrapper d-lg-block">
                         <div class="searchBar">
                             <button id="searchQuerySubmit" type="submit">
                                 <!-- #TODO put this svg on its own file and update it like u did the above ones -->
